@@ -1,17 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Footer from './Components/Footer'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'; // ✅ Import Footer
 
+// Reusable page component
+const Page = ({ title }) => (
+  <div style={{ padding: '2rem', minHeight: '70vh' }}>
+    <h2>{title}</h2>
+    <p>This is the {title} page content.</p>
+  </div>
+);
+
+// Dynamic page for dropdown links
+const DynamicPage = () => {
+  const { pageId } = useParams();
+  const formattedTitle = pageId
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+  return <Page title={formattedTitle} />;
+};
+
+// Main App
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Footer/>
-    </>
-  )
+    <Router>
+      <Navbar />
+
+      {/* Page content */}
+      <Routes>
+        <Route path="/" element={<Page title="Home" />} />
+        <Route path="/pages/:pageId" element={<DynamicPage />} />
+        <Route path="/tenders" element={<Page title="Tenders" />} />
+        <Route path="/careers" element={<Page title="Careers" />} />
+      </Routes>
+
+      <Footer /> {/* ✅ Footer added here */}
+    </Router>
+  );
 }
 
-export default App
+export default App;
