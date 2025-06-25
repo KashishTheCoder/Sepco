@@ -18,7 +18,7 @@ const originalImages = [
     sepco7, sepco8, sepco9, sepco10, sepco11,
 ];
 
-const images = [...originalImages, originalImages[0]]; // Clone 1st image at end
+const images = [...originalImages, originalImages[0]];
 
 const Slider = () => {
     const [current, setCurrent] = useState(0);
@@ -28,10 +28,9 @@ const Slider = () => {
     const totalSlides = originalImages.length;
 
     const goTo = (index) => {
-        setCurrent(index);
+        setCurrent((index + images.length) % images.length);
     };
 
-    // Auto-slide
     useEffect(() => {
         intervalRef.current = setInterval(() => {
             goTo(current + 1);
@@ -39,7 +38,6 @@ const Slider = () => {
         return () => clearInterval(intervalRef.current);
     }, [current]);
 
-    // Seamless loop reset after transition ends
     useEffect(() => {
         const handleTransitionEnd = () => {
             if (current === totalSlides) {
@@ -69,8 +67,22 @@ const Slider = () => {
                 ))}
             </div>
 
-            <button className="arrow fancy prev" onClick={() => goTo(current - 1)}>&#10094;</button>
-            <button className="arrow fancy next" onClick={() => goTo(current + 1)}>&#10095;</button>
+            {/* Overlay Content */}
+            <div className="slider-overlay">
+                <h2 className="slider-title">Welcome to SEPCO</h2>
+                <p className="slider-subtitle">Sukkur Electric Power Company</p>
+                <a
+                    href="https://ibs.pitc.com.pk/dashboard/user/auth/sign-in"
+                    className="slider-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Go to MIS Portal
+                </a>
+            </div>
+
+            <button className="arrow prev" onClick={() => goTo(current - 1)}>‹</button>
+            <button className="arrow next" onClick={() => goTo(current + 1)}>›</button>
         </div>
     );
 };
