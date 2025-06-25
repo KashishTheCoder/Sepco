@@ -1,8 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer'; 
-import InfoCardsSection from './Components/InfoCardsSection';
+
+import Navbar from './InfoCardsSectionomponents/Navbar';
+import Footer from './components/Footer';
+import Slider from './components/Slider';
+// import InfoCardsSection from './components/InfoCardsSection';
+
+
 // Reusable page component
 const Page = ({ title }) => (
   <div style={{ padding: '2rem', minHeight: '70vh' }}>
@@ -25,8 +29,9 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Slider />
       <InfoCardsSection/>
-
+      
 
       {/* Page content */}
       <Routes>
@@ -36,7 +41,7 @@ function App() {
         <Route path="/careers" element={<Page title="Careers" />} />
       </Routes>
 
-      <Footer /> {/* ✅ Footer added here */}
+      <Footer />
     </Router>
   );
 }
