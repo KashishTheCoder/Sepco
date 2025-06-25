@@ -65,7 +65,7 @@ Light Blue: #e6f0ff
   position: relative;
 }
 
-.navbar-item > a,
+.navbar-item>a,
 .dropdown-title {
   text-decoration: none;
   color: white;
@@ -74,7 +74,7 @@ Light Blue: #e6f0ff
   transition: color 0.3s ease;
 }
 
-.navbar-item > a:hover,
+.navbar-item>a:hover,
 .dropdown-title:hover {
   color: #FFD600;
 }

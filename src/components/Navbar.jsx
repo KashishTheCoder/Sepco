@@ -40,6 +40,9 @@ const Navbar = () => {
 
         {/* Main Menu */}
         <ul className={`navbar-menu ${mobileOpen ? 'open' : ''}`}>
+          <li className='navbar-item'>
+            <Link to="/">Home</Link>
+          </li>
           {Object.entries(menuItems).map(([menu, items]) => (
             <li
               className="navbar-item"
