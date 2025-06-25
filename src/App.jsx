@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Slider from './components/Slider';
+import ChairmanMessage from './components/ChairmanMessage';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -27,6 +28,7 @@ function App() {
     <Router>
       <Navbar />
       <Slider />
+      <ChairmanMessage />
 
       {/* Page content */}
       <Routes>
