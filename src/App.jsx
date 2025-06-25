@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer'; // ✅ Import Footer
-
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer'; 
+import InfoCardsSection from './Components/InfoCardsSection';
 // Reusable page component
 const Page = ({ title }) => (
   <div style={{ padding: '2rem', minHeight: '70vh' }}>
@@ -25,6 +25,8 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <InfoCardsSection/>
+
 
       {/* Page content */}
       <Routes>
