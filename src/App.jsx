@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+
+// Example dummy components for pages
+const Page = ({ title }) => (
+  <div style={{ padding: '2rem' }}>
+    <h2>{title}</h2>
+    <p>This is the {title} page content.</p>
+  </div>
+);
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Navbar />
+
+      {/* All routes go here */}
+      <Routes>
+        {/* Home */}
+        <Route path="/" element={<Page title="Home" />} />
+
+        {/* Dynamic pages - all your dropdown links */}
+        <Route path="/pages/:pageId" element={<DynamicPage />} />
+
+        {/* Tenders and Careers */}
+        <Route path="/tenders" element={<Page title="Tenders" />} />
+        <Route path="/careers" element={<Page title="Careers" />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+// Dynamic page to handle any page from the dropdowns
+import { useParams } from 'react-router-dom';
+const DynamicPage = () => {
+  const { pageId } = useParams();
+  const formattedTitle = pageId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  return <Page title={formattedTitle} />;
+};
+
+export default App;

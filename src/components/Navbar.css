@@ -1,0 +1,163 @@
+/* --- Color Palette ---
+Dark Blue: #0B1E3F
+Electric Yellow: #FFD600
+Light Blue: #e6f0ff
+*/
+
+.navbar {
+  background: linear-gradient(to right, #0b1e3f, #102f61);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-logo img {
+  height: 55px;
+  filter: drop-shadow(0 0 4px #FFD600);
+}
+
+.navbar-logo h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFD600;
+  margin: 0;
+}
+
+.navbar-logo p {
+  font-size: 12px;
+  color: #cce4f7;
+  margin: 0;
+}
+
+/* Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu.open {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item > a,
+.dropdown-title {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-item > a:hover,
+.dropdown-title:hover {
+  color: #FFD600;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  display: none;
+  border-radius: 6px;
+  min-width: 220px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  margin-bottom: 6px;
+}
+
+.dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-menu li a {
+  color: #0b1e3f;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  color: #FFD600;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.caret {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Mobile Toggle */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #FFD600;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin-bottom: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #f5f5f5;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown-menu li a {
+    color: #0b1e3f;
+  }
+}
