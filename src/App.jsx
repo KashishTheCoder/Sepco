@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 
-import Navbar from './InfoCardsSectionomponents/Navbar';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Slider from './components/Slider';
-// import InfoCardsSection from './components/InfoCardsSection';
+import InfoCardsSection from './components/InfoCardsSection';
 
 
 // Reusable page component
