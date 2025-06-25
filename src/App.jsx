@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'; // ✅ Import Footer
+import Footer from './components/Footer';
+import Slider from './components/Slider';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -25,6 +26,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Slider />
 
       {/* Page content */}
       <Routes>
@@ -34,7 +36,7 @@ function App() {
         <Route path="/careers" element={<Page title="Careers" />} />
       </Routes>
 
-      <Footer /> {/* ✅ Footer added here */}
+      <Footer />
     </Router>
   );
 }
