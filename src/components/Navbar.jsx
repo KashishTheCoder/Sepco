@@ -41,9 +41,18 @@ const Navbar = () => {
     if (label === 'New Connection Application') return 'https://www.enc.com.pk/'
     if (label === 'Load Shedding Schedule') return '/pages/load-management-schedule';
     if (label === 'Pocket Book USAID For Power Distribution System') return '/pages/pocket-book-usaid-for-power-distribution-system';
+<<<<<<< HEAD
+    if (label === 'News') return '/news';
+    if (label === 'Press Releases') return '/pages/press-releases';
+    if (label === 'Global SDGS') return '/pages/global-sdgs-program';
+    if (label === 'Top 500 Defaulters') return '/pages/defaulters';
+    if (label === 'Data and Statistics') return '/pages/data-and-statistics';
+    
+=======
     if (label === 'Complaint Management Cell') return '/pages/complaint-management-cell';
     if (label === 'Consumer CNIC Registration') return '/pages/cnic-registration';
 
+>>>>>>> ec3976462505ea24158705bbc69c3a85da25239b
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 

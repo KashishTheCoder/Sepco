@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/BoardOfDirectors.css"; // We will create this CSS file
+import "../styles/About.css";
 
 const directors = [
     { title: "Chairman", name: "Agha Lal Bux Khan", role: "Independent Director" },
@@ -19,7 +20,7 @@ const directors = [
 
 export default function BoardOfDirectors() {
     return (
-        <section className="board-section">
+        <section className="board-section" style={{ background: 'linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%)' }}>
             <div className="container">
                 <h2 className="board-heading">Board of Directors</h2>
                 <div className="cards-wrapper">
