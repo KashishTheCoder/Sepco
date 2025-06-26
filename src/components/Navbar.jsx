@@ -31,6 +31,15 @@ const Navbar = () => {
     if (label === 'What We Do') return '/pages/what-we-do';
     if (label === 'The Ministry') return 'http://www.mowp.gov.pk/';
     if (label === 'Vision Mission and Values') return '/pages/vision-mission-values';
+    if (label === 'Load Management Schedule') return '/pages/load-management-schedule';
+    if (label === 'Daily, Monthly, and Quarterly Reports') return '/pages/reports';
+    if (label === 'Tariff Guide') return 'https://nepra.org.pk/tariff/Distribution%20SEPCO.php';
+    if (label === 'Duplicate Bill') return 'https://bill.pitc.com.pk/';
+    if (label === 'New Connection Cost Calculator') return 'https://www.pitc.com.pk/index.php/new-connection-estimator';
+    if (label === 'New Connection Application') return 'https://www.enc.com.pk/'
+    if (label === 'Load Shedding Schedule') return '/pages/load-management-schedule';
+    if (label === 'Pocket Book USAID For Power Distribution System') return '/pages/pocket-book-usaid-for-power-distribution-system';
+    
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
