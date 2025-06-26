@@ -20,6 +20,9 @@ import GalleryPage from './pages/GalleryPage';
 import WhatWeDo from './pages/WhatWeDo';
 import VisionMissionValues from './pages/VisionMissionValues';
 import Organogram from './pages/Organogram';
+import LoadManagementSchedule from './pages/LoadManagementSchedule';
+import Reports from './pages/Reports';
+import PocketBookUSAID from './pages/PocketBookUSAID';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -68,6 +71,9 @@ function App() {
         <Route path="/pages/consumers" element={<Consumers />} />
         <Route path="/pages/what-we-do" element={<WhatWeDo />} />
         <Route path="/pages/vision-mission-values" element={<VisionMissionValues />} />
+        <Route path="/pages/load-management-schedule" element={<LoadManagementSchedule />} />
+        <Route path="/pages/reports" element={<Reports />} />
+        <Route path="/pages/pocket-book-usaid-for-power-distribution-system" element={<PocketBookUSAID />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />
