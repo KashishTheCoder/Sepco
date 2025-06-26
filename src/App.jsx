@@ -19,13 +19,18 @@ import Consumers from './pages/Consumers';
 import GalleryPage from './pages/GalleryPage';
 import WhatWeDo from './pages/WhatWeDo';
 import VisionMissionValues from './pages/VisionMissionValues';
+import Organogram from './pages/Organogram';
 import LoadManagementSchedule from './pages/LoadManagementSchedule';
 import Reports from './pages/Reports';
 import PocketBookUSAID from './pages/PocketBookUSAID';
+<<<<<<< HEAD
 import News from './pages/News';
 import PressReleases from './pages/PressReleases';
 import GlobalSDGS from './pages/GlobalSDGS';
 import Defaulters from './pages/Defaulters';
+=======
+import ComplaintCell from './pages/ComplaintCell';
+>>>>>>> ec3976462505ea24158705bbc69c3a85da25239b
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -70,15 +75,20 @@ function App() {
         <Route path="/pages/area-of-responsibility" element={<AreaOfResponsibility />} />
         <Route path="/pages/key-statistics" element={<KeyStatistics />} />
         <Route path="/pages/maps" element={<Maps />} />
+        <Route path="/organogram" element={<Organogram />} />
         <Route path="/pages/consumers" element={<Consumers />} />
         <Route path="/pages/what-we-do" element={<WhatWeDo />} />
         <Route path="/pages/vision-mission-values" element={<VisionMissionValues />} />
         <Route path="/pages/load-management-schedule" element={<LoadManagementSchedule />} />
         <Route path="/pages/reports" element={<Reports />} />
         <Route path="/pages/pocket-book-usaid-for-power-distribution-system" element={<PocketBookUSAID />} />
+<<<<<<< HEAD
         <Route path="/pages/press-releases" element={<PressReleases />} />
         <Route path="/pages/global-sdgs-program" element={<GlobalSDGS />} />
         <Route path="/pages/defaulters" element={<Defaulters />} />
+=======
+        <Route path="/pages/complaint-management-cell" element={<ComplaintCell />} />
+>>>>>>> ec3976462505ea24158705bbc69c3a85da25239b
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />

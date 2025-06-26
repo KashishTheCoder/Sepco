@@ -32,6 +32,7 @@ const Navbar = () => {
     if (label === 'What We Do') return '/pages/what-we-do';
     if (label === 'The Ministry') return 'http://www.mowp.gov.pk/';
     if (label === 'Vision Mission and Values') return '/pages/vision-mission-values';
+    if (label === 'Organogram') return '/organogram';
     if (label === 'Load Management Schedule') return '/pages/load-management-schedule';
     if (label === 'Daily, Monthly, and Quarterly Reports') return '/pages/reports';
     if (label === 'Tariff Guide') return 'https://nepra.org.pk/tariff/Distribution%20SEPCO.php';
@@ -40,12 +41,17 @@ const Navbar = () => {
     if (label === 'New Connection Application') return 'https://www.enc.com.pk/'
     if (label === 'Load Shedding Schedule') return '/pages/load-management-schedule';
     if (label === 'Pocket Book USAID For Power Distribution System') return '/pages/pocket-book-usaid-for-power-distribution-system';
+<<<<<<< HEAD
     if (label === 'News') return '/news';
     if (label === 'Press Releases') return '/pages/press-releases';
     if (label === 'Global SDGS') return '/pages/global-sdgs-program';
     if (label === 'Top 500 Defaulters') return '/pages/defaulters';
     if (label === 'Data and Statistics') return '/pages/data-and-statistics';
     
+=======
+    if (label === 'Complaint Management Cell') return '/pages/complaint-management-cell';
+
+>>>>>>> ec3976462505ea24158705bbc69c3a85da25239b
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 

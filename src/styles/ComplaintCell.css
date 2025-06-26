@@ -1,0 +1,101 @@
+.complaint-bg {
+    min-height: 63vh;
+    background: linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+    animation: complaint-fade-in 1.2s;
+}
+
+.complaint-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(11, 30, 63, 0.13);
+    max-width: 1000px;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1rem;
+    animation: complaint-fade-in 1.2s;
+}
+
+.complaint-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0B1E3F;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Flex-based card layout */
+.complaint-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Individual card styles */
+.complaint-card {
+    flex: 1 1 280px;
+    max-width: 400px;
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 4px solid #0072c6;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+.complaint-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.icon-wrapper {
+    margin-bottom: 1rem;
+}
+
+.complaint-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0B1E3F;
+    margin-top: 0.5rem;
+}
+
+.complaint-card p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .complaint-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .complaint-title {
+        font-size: 1.8rem;
+    }
+
+    .complaint-card-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@keyframes complaint-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
