@@ -1,5 +1,5 @@
 import { FaNewspaper, FaFileContract, FaExclamationTriangle } from "react-icons/fa";
-import "./InfoCardsSection.css";
+import "../styles/InfoCardsSection.css";
 import news1Image from "../assets/news1.jpeg";
 import news2Image from "../assets/news2.jpg";
 import news3Image from "../assets/news3.jpeg";

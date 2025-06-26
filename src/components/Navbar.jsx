@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import '../styles/Navbar.css';
 import sepcoLogo from '../assets/sepco_logo.png';
 
 const menuItems = {
