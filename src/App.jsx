@@ -7,7 +7,7 @@ import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
 import HomePageCards from './components/HomePageCards';
-
+import Gallery from './components/Gallery';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -32,9 +32,11 @@ function App() {
     <Router>
       <Navbar />
       <Slider />
-      <InfoCardsSection/>
+      <InfoCardsSection />
       <ChairmanMessage />
+      <Gallery />
       <HomePageCards />
+      
 
       {/* Page content */}
       <Routes>
