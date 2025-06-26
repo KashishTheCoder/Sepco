@@ -52,7 +52,6 @@ const Navbar = () => {
               key={menu}
               onClick={() => toggleDropdown(menu)}
               onMouseEnter={() => setActiveMenu(menu)}
-              onMouseLeave={() => setActiveMenu(null)}
             >
               <span className="dropdown-title">
                 {menu} <span className="caret">▼</span>
