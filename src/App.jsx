@@ -7,7 +7,7 @@ import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
 import HomePageCards from './components/HomePageCards';
-import Gallery from './components/Gallery';
+import GalleryComponent from './components/GalleryComponent';
 import BoardOfDirectors from './pages/BoardOfDirectors';
 import About from './pages/About';
 import SeniorManagement from './pages/SeniorManagement';
@@ -16,6 +16,7 @@ import AreaOfResponsibility from './pages/AreaOfResponsibility';
 import KeyStatistics from './pages/KeyStatistics';
 import Maps from './pages/Maps';
 import Consumers from './pages/Consumers';
+import GalleryPage from './pages/GalleryPage';
 import WhatWeDo from './pages/WhatWeDo';
 import VisionMissionValues from './pages/VisionMissionValues';
 import LoadManagementSchedule from './pages/LoadManagementSchedule';
@@ -45,7 +46,7 @@ const Home = () => (
     <Slider />
     <InfoCardsSection />
     <ChairmanMessage />
-    <Gallery />
+    <GalleryComponent />
     <HomePageCards />
   </>
 );
@@ -59,6 +60,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/senior-management" element={<SeniorManagement />} />
+        <Route path="/image-gallery" element={<GalleryPage />} />
         <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/ceo-sepco" element={<CEOSEPCO />} />
         <Route path="/pages/area-of-responsibility" element={<AreaOfResponsibility />} />

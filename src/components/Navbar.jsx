@@ -28,6 +28,7 @@ const Navbar = () => {
     if (label === 'Key Statistics') return '/pages/key-statistics';
     if (label === 'Maps') return '/pages/maps';
     if (label === 'Consumers' || label === 'Customers') return '/pages/consumers';
+    if (label === 'Image Gallery') return '/image-gallery';
     if (label === 'What We Do') return '/pages/what-we-do';
     if (label === 'The Ministry') return 'http://www.mowp.gov.pk/';
     if (label === 'Vision Mission and Values') return '/pages/vision-mission-values';
