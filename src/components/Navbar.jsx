@@ -21,6 +21,7 @@ const Navbar = () => {
 
   const buildLink = (label) => {
     if (label === 'About SEPCO') return '/about';
+    if (label === 'Board of Directors') return '/pages/board-of-directors';
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 

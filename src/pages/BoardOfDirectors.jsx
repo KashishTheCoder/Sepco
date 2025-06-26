@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import "../styles/BoardOfDirectors.css"; // We will create this CSS file
 
 const directors = [
@@ -21,23 +19,19 @@ const directors = [
 
 export default function BoardOfDirectors() {
     return (
-        <>
-            <Navbar />
-            <section className="board-section">
-                <div className="container">
-                    <h2 className="board-heading">Board of Directors</h2>
-                    <div className="cards-wrapper">
-                        {directors.map((member, index) => (
-                            <div className="board-card" key={index}>
-                                <h3>{member.title}</h3>
-                                <p>{member.name}</p>
-                                <p>{member.role}</p>
-                            </div>
-                        ))}
-                    </div>
+        <section className="board-section">
+            <div className="container">
+                <h2 className="board-heading">Board of Directors</h2>
+                <div className="cards-wrapper">
+                    {directors.map((member, index) => (
+                        <div className="board-card" key={index}>
+                            <h3>{member.title}</h3>
+                            <p>{member.name}</p>
+                            <p>{member.role}</p>
+                        </div>
+                    ))}
                 </div>
-            </section>
-            <Footer />
-        </>
+            </div>
+        </section>
     );
 }
