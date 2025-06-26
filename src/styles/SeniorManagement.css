@@ -16,7 +16,10 @@
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    gap: 3.5rem 2rem;
+    justify-content: center;
+    grid-auto-rows: 1fr;
+    margin-bottom: 2.5rem;
 }
 
 .profile-card {
@@ -59,4 +62,78 @@
 .designation {
     font-size: 0.95rem;
     color: #004085;
+}
+
+.sm-bg {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 1rem 2rem 1rem;
+    animation: sm-fade-in 1.2s;
+}
+
+.sm-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(11, 30, 63, 0.13);
+    max-width: 900px;
+    width: 100%;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    position: relative;
+    margin-top: 2rem;
+    animation: sm-fade-in 1.2s;
+}
+
+.sm-accent {
+    height: 6px;
+    width: 80px;
+    background: linear-gradient(90deg, #FFD600 0%, #0B1E3F 100%);
+    border-radius: 3px;
+    position: absolute;
+    top: 1.5rem;
+    left: 2.5rem;
+}
+
+.sm-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0B1E3F;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.sm-title span {
+    color: #FFD600;
+    font-weight: 600;
+}
+
+@keyframes sm-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .sm-container {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+
+    .sm-title {
+        font-size: 1.5rem;
+    }
+
+    .sm-accent {
+        left: 0.7rem;
+        width: 50px;
+    }
 }

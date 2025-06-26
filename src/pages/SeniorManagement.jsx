@@ -38,18 +38,21 @@ const seniorTeam = [
 
 const SeniorManagement = () => {
     return (
-        <div className="senior-management-container">
-            <h2 className="title">Senior Management</h2>
-            <div className="card-grid">
-                {seniorTeam.map((member, index) => (
-                    <div key={index} className="profile-card">
-                        <img src={member.image} alt={member.name} />
-                        <div className="info">
-                            <p className="name">{member.name}</p>
-                            <p className="designation">{member.title}</p>
+        <div className="sm-bg">
+            <div className="sm-container">
+                <div className="sm-accent" />
+                <h2 className="sm-title">Senior Management</h2>
+                <div className="card-grid">
+                    {seniorTeam.map((member, index) => (
+                        <div key={index} className="profile-card">
+                            <img src={member.image} alt={member.name} />
+                            <div className="info">
+                                <p className="name">{member.name}</p>
+                                <p className="designation">{member.title}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
