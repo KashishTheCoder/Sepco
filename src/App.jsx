@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
-
+import Gallery from './components/Gallery';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -31,8 +31,9 @@ function App() {
     <Router>
       <Navbar />
       <Slider />
-      <InfoCardsSection/>
+      <InfoCardsSection />
       <ChairmanMessage />
+      <Gallery />
 
       {/* Page content */}
       <Routes>
