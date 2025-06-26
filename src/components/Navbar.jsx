@@ -29,6 +29,9 @@ const Navbar = () => {
     if (label === 'Maps') return '/pages/maps';
     if (label === 'Consumers' || label === 'Customers') return '/pages/consumers';
     if (label === 'Image Gallery') return '/image-gallery';
+    if (label === 'What We Do') return '/pages/what-we-do';
+    if (label === 'The Ministry') return 'http://www.mowp.gov.pk/';
+    if (label === 'Vision Mission and Values') return '/pages/vision-mission-values';
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
@@ -67,7 +70,11 @@ const Navbar = () => {
               <ul className={`dropdown-menu ${activeMenu === menu ? 'show' : ''}`}>
                 {items.map((item) => (
                   <li key={item}>
-                    <Link to={buildLink(item)}>{item}</Link>
+                    {buildLink(item).startsWith('http') ? (
+                      <a href={buildLink(item)} target="_blank" rel="noopener noreferrer">{item}</a>
+                    ) : (
+                      <Link to={buildLink(item)}>{item}</Link>
+                    )}
                   </li>
                 ))}
               </ul>
