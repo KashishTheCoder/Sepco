@@ -22,6 +22,7 @@ const Navbar = () => {
   const buildLink = (label) => {
     if (label === 'About SEPCO') return '/about';
     if (label === 'Board of Directors') return '/pages/board-of-directors';
+    if (label === 'Senior Management') return '/senior-management';
     if (label === 'CEO SEPCO') return '/pages/ceo-sepco';
     if (label === 'Area of Responsibility') return '/pages/area-of-responsibility';
     if (label === 'Key Statistics') return '/pages/key-statistics';
@@ -58,7 +59,6 @@ const Navbar = () => {
               key={menu}
               onClick={() => toggleDropdown(menu)}
               onMouseEnter={() => setActiveMenu(menu)}
-              onMouseLeave={() => setActiveMenu(null)}
             >
               <span className="dropdown-title">
                 {menu} <span className="caret">▼</span>

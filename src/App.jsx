@@ -10,6 +10,7 @@ import HomePageCards from './components/HomePageCards';
 import Gallery from './components/Gallery';
 import BoardOfDirectors from './pages/BoardOfDirectors';
 import About from './pages/About';
+import SeniorManagement from './pages/SeniorManagement';
 import CEOSEPCO from './pages/CEOSEPCO';
 import AreaOfResponsibility from './pages/AreaOfResponsibility';
 import KeyStatistics from './pages/KeyStatistics';
@@ -51,6 +52,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/board-of-directors" element={<BoardOfDirectors />} />
+        <Route path="/senior-management" element={<SeniorManagement />} />
         <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/ceo-sepco" element={<CEOSEPCO />} />
         <Route path="/pages/area-of-responsibility" element={<AreaOfResponsibility />} />
