@@ -24,6 +24,7 @@ import LoadManagementSchedule from './pages/LoadManagementSchedule';
 import Reports from './pages/Reports';
 import PocketBookUSAID from './pages/PocketBookUSAID';
 import ComplaintCell from './pages/ComplaintCell';
+import CNICRegistration from './pages/CNICRegistration';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -76,6 +77,7 @@ function App() {
         <Route path="/pages/reports" element={<Reports />} />
         <Route path="/pages/pocket-book-usaid-for-power-distribution-system" element={<PocketBookUSAID />} />
         <Route path="/pages/complaint-management-cell" element={<ComplaintCell />} />
+        <Route path="/pages/cnic-registration" element={<CNICRegistration />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />

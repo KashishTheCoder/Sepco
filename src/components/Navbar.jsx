@@ -42,6 +42,7 @@ const Navbar = () => {
     if (label === 'Load Shedding Schedule') return '/pages/load-management-schedule';
     if (label === 'Pocket Book USAID For Power Distribution System') return '/pages/pocket-book-usaid-for-power-distribution-system';
     if (label === 'Complaint Management Cell') return '/pages/complaint-management-cell';
+    if (label === 'Consumer CNIC Registration') return '/pages/cnic-registration';
 
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
