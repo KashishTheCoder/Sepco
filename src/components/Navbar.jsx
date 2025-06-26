@@ -23,6 +23,8 @@ const Navbar = () => {
     if (label === 'About SEPCO') return '/about';
     if (label === 'Board of Directors') return '/pages/board-of-directors';
     if (label === 'Senior Management') return '/senior-management';
+    if (label === 'CEO SEPCO') return '/pages/ceo-sepco';
+    if (label === 'Area of Responsibility') return '/pages/area-of-responsibility';
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 

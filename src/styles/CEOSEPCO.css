@@ -1,0 +1,100 @@
+.ceo-bg {
+    min-height: 100vh;
+    background: #e6f0f7;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 1rem 2rem 1rem;
+  }
+  
+  .ceo-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(11,30,63,0.13);
+    max-width: 900px;
+    width: 100%;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    position: relative;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ceo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .ceo-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(11,30,63,0.13);
+    margin-bottom: 1.2rem;
+    border: 4px solid #e6f0ff;
+    background: #f7fafd;
+  }
+  
+  .ceo-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a2f5a;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .ceo-name span {
+    color: #1976d2;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .ceo-message {
+    font-size: 1.13rem;
+    color: #274472;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    background: #f7fafd;
+    border-left: 4px solid #1976d2;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .ceo-quote-mark {
+    font-size: 2.8rem;
+    color: #1976d2;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    opacity: 0.18;
+    user-select: none;
+  }
+  .ceo-quote-mark.top {
+    margin-bottom: -1.5rem;
+  }
+  .ceo-quote-mark.bottom {
+    margin-top: -1.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .ceo-container {
+      padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+    .ceo-name {
+      font-size: 1.3rem;
+    }
+    .ceo-img {
+      width: 90px;
+      height: 90px;
+    }
+    .ceo-message {
+      font-size: 1rem;
+      padding: 0.8rem 0.7rem;
+    }
+  }
