@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
+import HomePageCards from './components/HomePageCards';
 
 
 // Reusable page component
@@ -33,6 +34,7 @@ function App() {
       <Slider />
       <InfoCardsSection/>
       <ChairmanMessage />
+      <HomePageCards />
 
       {/* Page content */}
       <Routes>
