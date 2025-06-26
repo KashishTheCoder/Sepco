@@ -16,6 +16,8 @@ import AreaOfResponsibility from './pages/AreaOfResponsibility';
 import KeyStatistics from './pages/KeyStatistics';
 import Maps from './pages/Maps';
 import Consumers from './pages/Consumers';
+import WhatWeDo from './pages/WhatWeDo';
+import VisionMissionValues from './pages/VisionMissionValues';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -60,6 +62,8 @@ function App() {
         <Route path="/pages/key-statistics" element={<KeyStatistics />} />
         <Route path="/pages/maps" element={<Maps />} />
         <Route path="/pages/consumers" element={<Consumers />} />
+        <Route path="/pages/what-we-do" element={<WhatWeDo />} />
+        <Route path="/pages/vision-mission-values" element={<VisionMissionValues />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />
