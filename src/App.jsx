@@ -9,6 +9,7 @@ import InfoCardsSection from './components/InfoCardsSection';
 import HomePageCards from './components/HomePageCards';
 import Gallery from './components/Gallery';
 import BoardOfDirectors from './pages/BoardOfDirectors';
+import About from './pages/About';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -27,23 +28,24 @@ const DynamicPage = () => {
   return <Page title={formattedTitle} />;
 };
 
-// Main App
+// Home page content
+const Home = () => (
+  <>
+    <Slider />
+    <InfoCardsSection />
+    <ChairmanMessage />
+    <Gallery />
+    <HomePageCards />
+  </>
+);
+
 function App() {
   return (
     <Router>
       <Navbar />
-      {/* Page content */}
       <Routes>
-        <Route path="/" element={
-          <>
-            <Slider />
-            <InfoCardsSection />
-            <ChairmanMessage />
-            <Gallery />
-            <HomePageCards />
-            <Page title="Home" />
-          </>
-        } />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
