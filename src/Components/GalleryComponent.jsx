@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Gallery.css';
+import '../styles/GalleryComponent.css';
 import sepco10 from '../assets/sepco10.jpg';
 import sepco11 from '../assets/sepco11.jpg';
 
-const Gallery = () => {
+const GalleryComponent = () => {
     return (
         <section className="gallery-section">
             <h2 className="gallery-title">Image Gallery</h2>
@@ -21,4 +21,4 @@ const Gallery = () => {
     );
 };
 
-export default Gallery;
+export default GalleryComponent;
