@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Slider.css';
+import '../styles/Slider.css';
 
 import sepco1 from '../assets/sepco1.jpg';
 import sepco2 from '../assets/sepco2.jpg';

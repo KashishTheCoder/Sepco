@@ -1,5 +1,5 @@
 import React from 'react';
-import './ChairmanMessage.css';
+import "../styles/ChairmanMessage.css";
 import chairmanImg from '../assets/chairman.jpg'; // Update the path accordingly
 
 const ChairmanMessage = () => {

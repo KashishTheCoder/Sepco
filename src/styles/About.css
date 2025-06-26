@@ -1,0 +1,111 @@
+.about-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem 2rem 1rem;
+  animation: about-fade-in 1.2s;
+}
+
+.about-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(11,30,63,0.13);
+  max-width: 900px;
+  width: 100%;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  position: relative;
+  margin-top: 2rem;
+  animation: about-fade-in 1.2s;
+}
+
+.about-accent {
+  height: 6px;
+  width: 80px;
+  background: linear-gradient(90deg, #FFD600 0%, #0B1E3F 100%);
+  border-radius: 3px;
+  position: absolute;
+  top: 1.5rem;
+  left: 2.5rem;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0B1E3F;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+.about-title span {
+  color: #FFD600;
+  font-weight: 600;
+}
+
+.about-content {
+  font-size: 1.15rem;
+  color: #1a2f5a;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  text-align: justify;
+}
+
+.about-circles {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.about-circle-group {
+  background: #f7fafc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(11,30,63,0.07);
+  padding: 1.2rem 2rem;
+  min-width: 220px;
+  text-align: center;
+}
+.about-circle-group h3 {
+  color: #0B1E3F;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+.about-circle-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about-circle-group li {
+  color: #1a2f5a;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+@keyframes about-fade-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .about-title {
+    font-size: 1.5rem;
+  }
+  .about-accent {
+    left: 0.7rem;
+    width: 50px;
+  }
+  .about-circles {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+} 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Gallery.css';
+import '../styles/Gallery.css';
 import sepco10 from '../assets/sepco10.jpg';
 import sepco11 from '../assets/sepco11.jpg';
 

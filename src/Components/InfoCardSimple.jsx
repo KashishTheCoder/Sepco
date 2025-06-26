@@ -1,5 +1,5 @@
 import { FaBriefcase, FaBell } from "react-icons/fa";
-import "./InfoCardSimple.css";
+import "../styles/InfoCardSimple.css";
 
 const careersData = [
   { title: "C-LEVEL JOBS", date: "Closing Date: 11-06-2025", image: "/assets/clevel_jobs.jpeg" },
@@ -24,7 +24,7 @@ const InfoCardSimple = ({ title, seeMoreLink, items, highlightIndex = 0, icon })
       <span>{title}</span>
       <a href={seeMoreLink} className="info-card-simple-more">see more</a>
     </div>
-    <div className="info-card-simple-body" style={items.length < 3 ? {justifyContent: 'center'} : {}}>
+    <div className="info-card-simple-body" style={items.length < 3 ? { justifyContent: 'center' } : {}}>
       <ul>
         {items.map((item, idx) => (
           <li

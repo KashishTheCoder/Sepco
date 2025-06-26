@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import '../styles/Navbar.css';
 import sepcoLogo from '../assets/sepco_logo.png';
 
 const menuItems = {
@@ -19,7 +19,10 @@ const Navbar = () => {
     setActiveMenu(activeMenu === menu ? null : menu);
   };
 
-  const buildLink = (label) => `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
+  const buildLink = (label) => {
+    if (label === 'About SEPCO') return '/about';
+    return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
+  };
 
   return (
     <nav className="navbar">
