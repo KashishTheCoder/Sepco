@@ -1,15 +1,18 @@
 .board-section {
     padding: 4rem 1rem;
-    background-color: #fff;
+    background: linear-gradient(145deg, #001f3f, #003366);
+    /* Replace this with your image gallery background */
     text-align: center;
 }
 
 .board-heading {
     font-size: 2rem;
-    color: #0a5275;
-    /* same as your navbar blue */
+    color: #FFD700;
+    /* Electric Yellow */
     margin-bottom: 3rem;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .container {
@@ -21,7 +24,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
-    justify-items: center;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
 .board-card {
