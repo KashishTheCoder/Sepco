@@ -19,6 +19,7 @@ import Consumers from './pages/Consumers';
 import GalleryPage from './pages/GalleryPage';
 import WhatWeDo from './pages/WhatWeDo';
 import VisionMissionValues from './pages/VisionMissionValues';
+import Organogram from './pages/Organogram';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -63,6 +64,7 @@ function App() {
         <Route path="/pages/area-of-responsibility" element={<AreaOfResponsibility />} />
         <Route path="/pages/key-statistics" element={<KeyStatistics />} />
         <Route path="/pages/maps" element={<Maps />} />
+        <Route path="/organogram" element={<Organogram />} />
         <Route path="/pages/consumers" element={<Consumers />} />
         <Route path="/pages/what-we-do" element={<WhatWeDo />} />
         <Route path="/pages/vision-mission-values" element={<VisionMissionValues />} />

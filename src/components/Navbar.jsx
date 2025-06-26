@@ -32,6 +32,7 @@ const Navbar = () => {
     if (label === 'What We Do') return '/pages/what-we-do';
     if (label === 'The Ministry') return 'http://www.mowp.gov.pk/';
     if (label === 'Vision Mission and Values') return '/pages/vision-mission-values';
+    if (label === 'Organogram') return '/organogram';
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
