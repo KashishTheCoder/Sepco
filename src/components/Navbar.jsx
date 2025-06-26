@@ -19,7 +19,10 @@ const Navbar = () => {
     setActiveMenu(activeMenu === menu ? null : menu);
   };
 
-  const buildLink = (label) => `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
+  const buildLink = (label) => {
+    if (label === 'Board of Directors') return '/pages/board-of-directors';
+    return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
+  };
 
   return (
     <nav className="navbar">

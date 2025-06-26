@@ -32,23 +32,23 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Slider />
-      <InfoCardsSection />
-      <ChairmanMessage />
-      <Gallery />
-      <HomePageCards />
-      
-
       {/* Page content */}
       <Routes>
-        <Route path="/" element={<Page title="Home" />} />
+        <Route path="/" element={
+          <>
+            <Slider />
+            <InfoCardsSection />
+            <ChairmanMessage />
+            <Gallery />
+            <HomePageCards />
+            <Page title="Home" />
+          </>
+        } />
         <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />
-
       </Routes>
-
       <Footer />
     </Router>
   );
