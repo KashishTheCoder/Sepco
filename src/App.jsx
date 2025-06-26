@@ -16,6 +16,7 @@ import AreaOfResponsibility from './pages/AreaOfResponsibility';
 import KeyStatistics from './pages/KeyStatistics';
 import Maps from './pages/Maps';
 import Consumers from './pages/Consumers';
+import ImageGallery from './pages/ImageGallery';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/senior-management" element={<SeniorManagement />} />
+        <Route path="/image-gallery" element={<ImageGallery />} />
         <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/ceo-sepco" element={<CEOSEPCO />} />
         <Route path="/pages/area-of-responsibility" element={<AreaOfResponsibility />} />

@@ -28,6 +28,7 @@ const Navbar = () => {
     if (label === 'Key Statistics') return '/pages/key-statistics';
     if (label === 'Maps') return '/pages/maps';
     if (label === 'Consumers' || label === 'Customers') return '/pages/consumers';
+    if (label === 'Image Gallery') return '/image-gallery';
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
