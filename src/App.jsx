@@ -7,6 +7,7 @@ import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
 import Gallery from './components/Gallery';
+import BoardOfDirectors from './pages/BoardOfDirectors';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -38,9 +39,11 @@ function App() {
       {/* Page content */}
       <Routes>
         <Route path="/" element={<Page title="Home" />} />
+        <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />
+
       </Routes>
 
       <Footer />
