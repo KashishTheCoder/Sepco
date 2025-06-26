@@ -24,6 +24,9 @@ const Navbar = () => {
     if (label === 'Board of Directors') return '/pages/board-of-directors';
     if (label === 'CEO SEPCO') return '/pages/ceo-sepco';
     if (label === 'Area of Responsibility') return '/pages/area-of-responsibility';
+    if (label === 'Key Statistics') return '/pages/key-statistics';
+    if (label === 'Maps') return '/pages/maps';
+    if (label === 'Consumers' || label === 'Customers') return '/pages/consumers';
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
 

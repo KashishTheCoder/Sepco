@@ -1,0 +1,73 @@
+.ks-bg {
+  /* min-height: 100vh; */
+  background: linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.ks-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(11,30,63,0.13);
+  max-width: 1100px;
+  width: 100%;
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  /* margin-top: 2rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ks-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a2f5a;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+.ks-table-wrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.ks-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+}
+
+.ks-table th {
+  color: #607080;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.7rem 0.5rem;
+  border-bottom: 2px solid #dbe4ee;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.ks-empty {
+  text-align: center;
+  color: #222;
+  font-size: 1.1rem;
+  margin: 1.2rem 0 0.5rem 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .ks-container {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .ks-title {
+    font-size: 1.5rem;
+  }
+  .ks-table th {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.2rem;
+  }
+} 

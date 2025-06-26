@@ -12,6 +12,9 @@ import BoardOfDirectors from './pages/BoardOfDirectors';
 import About from './pages/About';
 import CEOSEPCO from './pages/CEOSEPCO';
 import AreaOfResponsibility from './pages/AreaOfResponsibility';
+import KeyStatistics from './pages/KeyStatistics';
+import Maps from './pages/Maps';
+import Consumers from './pages/Consumers';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -51,6 +54,9 @@ function App() {
         <Route path="/pages/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/pages/ceo-sepco" element={<CEOSEPCO />} />
         <Route path="/pages/area-of-responsibility" element={<AreaOfResponsibility />} />
+        <Route path="/pages/key-statistics" element={<KeyStatistics />} />
+        <Route path="/pages/maps" element={<Maps />} />
+        <Route path="/pages/consumers" element={<Consumers />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Page title="Careers" />} />
