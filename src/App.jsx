@@ -29,6 +29,13 @@ import GlobalSDGS from './pages/GlobalSDGS';
 import Defaulters from './pages/Defaulters';
 import ComplaintCell from './pages/ComplaintCell';
 import CNICRegistration from './pages/CNICRegistration';
+import AMI from './pages/AMI';
+import MIRAD from './pages/MIRAD';
+import ERPUserManuals from './pages/ERPUserManuals';
+import NETMetering from './pages/NETMetering';
+import TaxDeductionCertificate from './pages/TaxDeductionCertificate';
+import MobileRegistration from './pages/MobileRegistration';
+import Careers from './pages/Careers';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -85,9 +92,15 @@ function App() {
         <Route path="/pages/defaulters" element={<Defaulters />} />
         <Route path="/pages/complaint-management-cell" element={<ComplaintCell />} />
         <Route path="/pages/cnic-registration" element={<CNICRegistration />} />
+        <Route path="/pages/ami" element={<AMI />} />
+        <Route path="/pages/mirad" element={<MIRAD />} />
+        <Route path="/pages/erp-(user-manuals)" element={<ERPUserManuals />} />
+        <Route path="/pages/net-metering" element={<NETMetering />} />
+        <Route path="/pages/tax-deduction-certificate" element={<TaxDeductionCertificate />} />
+        <Route path="/pages/mobile-registration" element={<MobileRegistration />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
-        <Route path="/careers" element={<Page title="Careers" />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/news" element={<News />} />
       </Routes>
       <Footer />

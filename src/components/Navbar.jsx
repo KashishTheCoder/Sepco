@@ -48,6 +48,12 @@ const Navbar = () => {
     if (label === 'Data and Statistics') return '/pages/data-and-statistics';
     if (label === 'Complaint Management Cell') return '/pages/complaint-management-cell';
     if (label === 'Consumer CNIC Registration') return '/pages/cnic-registration';
+    if (label === 'AMI') return '/pages/ami';
+    if (label === 'MIRAD') return '/pages/mirad';
+    if (label === 'ERP (User Manuals)') return '/pages/erp-(user-manuals)';
+    if (label === 'NET Metering') return '/pages/net-metering';
+    if (label === 'Tax Deduction Certificate') return '/pages/tax-deduction-certificate';
+    if (label === 'Consumer Mobile Number Registration') return '/pages/mobile-registration';
 
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };
