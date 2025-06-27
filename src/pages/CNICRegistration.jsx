@@ -1,26 +1,50 @@
 import React, { useState } from "react";
 import "../styles/CNICRegistration.css";
 
-// Simple Modal component
+// Enhanced Modal component
 const Modal = ({ open, message, type, onClose }) => {
     if (!open) return null;
     return (
         <div style={{
             position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-            background: 'rgba(0,0,0,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999
+            background: 'rgba(0,0,0,0.30)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999,
+            animation: 'modalFadeIn 0.25s', fontFamily: 'Segoe UI, Arial, sans-serif'
         }}>
             <div style={{
-                background: '#fff', padding: '2rem 2.5rem', borderRadius: 12, minWidth: 300, boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
-                textAlign: 'center', borderTop: type === 'success' ? '4px solid #28a745' : '4px solid #dc3545'
+                background: '#fff', padding: '2.5rem 2.5rem 2rem 2.5rem', borderRadius: 18, minWidth: 340, maxWidth: 400,
+                boxShadow: '0 8px 32px rgba(0,0,0,0.18)', textAlign: 'center', position: 'relative',
+                borderTop: type === 'success' ? '6px solid #28a745' : '6px solid #dc3545',
+                transform: 'scale(1)', animation: 'modalScaleIn 0.25s'
             }}>
-                <div style={{ fontSize: 32, marginBottom: 12 }}>
-                    {type === 'success' ? '✅' : '❌'}
-                </div>
-                <div style={{ fontSize: 18, marginBottom: 20 }}>{message}</div>
                 <button onClick={onClose} style={{
-                    padding: '0.5rem 1.5rem', background: type === 'success' ? '#28a745' : '#dc3545', color: '#fff',
-                    border: 'none', borderRadius: 6, fontWeight: 600, fontSize: 16, cursor: 'pointer'
+                    position: 'absolute', top: 14, right: 18, background: 'none', border: 'none', fontSize: 22, color: '#888', cursor: 'pointer', fontWeight: 700
+                }} aria-label="Close">×</button>
+                <div style={{ fontSize: 54, marginBottom: 10, marginTop: 8 }}>
+                    {type === 'success' ? (
+                        <span role="img" aria-label="Success" style={{ color: '#28a745', textShadow: '0 2px 8px #d4f5e9' }}>✔️</span>
+                    ) : (
+                        <span role="img" aria-label="Error" style={{ color: '#dc3545', textShadow: '0 2px 8px #f5d4d4' }}>❌</span>
+                    )}
+                </div>
+                <div style={{
+                    fontSize: 22, fontWeight: 700, marginBottom: 12, color: type === 'success' ? '#28a745' : '#dc3545',
+                    letterSpacing: 0.2, lineHeight: 1.2
+                }}>{type === 'success' ? 'Success' : 'Error'}</div>
+                <div style={{ fontSize: 17, color: '#222', marginBottom: 24, fontWeight: 500, minHeight: 32 }}>
+                    {message}
+                </div>
+                <button onClick={onClose} style={{
+                    padding: '0.7rem 2.2rem', background: type === 'success' ? 'linear-gradient(90deg,#28a745,#43e97b)' : 'linear-gradient(90deg,#dc3545,#ff6a6a)',
+                    color: '#fff', border: 'none', borderRadius: 8, fontWeight: 700, fontSize: 17, cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
                 }}>OK</button>
+                <style>{`
+                    @keyframes modalFadeIn {
+                        from { opacity: 0; } to { opacity: 1; }
+                    }
+                    @keyframes modalScaleIn {
+                        from { transform: scale(0.85); opacity: 0.7; } to { transform: scale(1); opacity: 1; }
+                    }
+                `}</style>
             </div>
         </div>
     );
