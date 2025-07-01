@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 import sepcoLogo from '../assets/sepco_logo.png';
+import mopLogo from '../assets/mop.png';
 
 const menuItems = {
   Organization: ['About SEPCO', 'Board of Directors', 'CEO SEPCO', 'Senior Management', 'Area of Responsibility', 'Key Statistics', 'Maps', 'Organogram', 'Customers', 'What We Do', 'The Ministry', 'Vision Mission and Values', 'Image Gallery'],
@@ -15,7 +16,6 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Helper to check if device is mobile (for click vs hover)
   const isMobile = () => window.innerWidth <= 768;
 
   const handleMenuEnter = (menu) => {
@@ -26,8 +26,7 @@ const Navbar = () => {
     if (!isMobile()) setActiveMenu(null);
   };
 
-  const handleNavbarMouseEnter = (e) => {
-    // If not hovering over a menu item, close dropdown
+  const handleNavbarMouseEnter = () => {
     if (!isMobile()) setActiveMenu(null);
   };
 
@@ -54,7 +53,7 @@ const Navbar = () => {
     if (label === 'Tariff Guide') return 'https://nepra.org.pk/tariff/Distribution%20SEPCO.php';
     if (label === 'Duplicate Bill') return 'https://bill.pitc.com.pk/';
     if (label === 'New Connection Cost Calculator') return 'https://www.pitc.com.pk/index.php/new-connection-estimator';
-    if (label === 'New Connection Application') return 'https://www.enc.com.pk/'
+    if (label === 'New Connection Application') return 'https://www.enc.com.pk/';
     if (label === 'Load Shedding Schedule') return '/pages/load-management-schedule';
     if (label === 'Pocket Book USAID For Power Distribution System') return '/pages/pocket-book-usaid-for-power-distribution-system';
     if (label === 'News') return '/news';
@@ -121,6 +120,11 @@ const Navbar = () => {
           <li className="navbar-item" onMouseEnter={() => setActiveMenu(null)}><Link to="/tenders">Tenders</Link></li>
           <li className="navbar-item" onMouseEnter={() => setActiveMenu(null)}><Link to="/careers">Careers</Link></li>
         </ul>
+
+        {/* Ministry of Power Logo */}
+        <a href="https://power.gov.pk/" target="_blank" rel="noopener noreferrer">
+          <img src={mopLogo} alt="Ministry of Power" className="mop-logo" />
+        </a>
       </div>
     </nav>
   );

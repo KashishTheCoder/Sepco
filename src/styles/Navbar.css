@@ -52,6 +52,7 @@ Light Blue: #e6f0ff
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .navbar-menu.open {
@@ -126,7 +127,6 @@ Light Blue: #e6f0ff
   transition-delay: 0.1s;
 }
 
-
 .caret {
   font-size: 12px;
   margin-left: 4px;
@@ -138,6 +138,18 @@ Light Blue: #e6f0ff
   font-size: 24px;
   cursor: pointer;
   color: #FFD600;
+}
+
+/* Ministry of Power Logo */
+.mop-logo {
+  height: 45px;
+  margin-left: 16px;
+  filter: drop-shadow(0 0 4px #FFD600);
+  transition: transform 0.3s ease;
+}
+
+.mop-logo:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -168,5 +180,11 @@ Light Blue: #e6f0ff
 
   .dropdown-menu li a {
     color: #0b1e3f;
+  }
+
+  .mop-logo {
+    margin-top: 1rem;
+    height: 40px;
+    align-self: center;
   }
 }
