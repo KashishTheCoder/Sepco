@@ -54,6 +54,9 @@ const Navbar = () => {
     if (label === 'NET Metering') return '/pages/net-metering';
     if (label === 'Tax Deduction Certificate') return '/pages/tax-deduction-certificate';
     if (label === 'Consumer Mobile Number Registration') return '/pages/mobile-registration';
+    if (label === 'Orders & Notifications') return '/pages/orders-and-notifications';
+    if (label === 'Others') return '/pages/other-documents';
+    if (label === 'Seniority Lists') return '/pages/seniority-lists';
 
     return `/pages/${label.toLowerCase().replace(/\s+/g, '-')}`;
   };

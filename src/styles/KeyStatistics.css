@@ -47,8 +47,35 @@
   font-weight: 600;
   padding: 0.7rem 0.5rem;
   border-bottom: 2px solid #dbe4ee;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.5px;
+}
+
+.ks-table td {
+  color: #1a2f5a;
+  font-size: 1.05rem;
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e3eaf5;
+}
+
+.ks-table a {
+  color: #1565c0;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.ks-table a:hover {
+  color: #1976d2;
+}
+
+.ks-table tbody tr:nth-child(even) {
+  background: #f4f8fc;
+}
+
+.ks-table tbody tr:nth-child(odd) {
+  background: #fff;
 }
 
 .ks-empty {
