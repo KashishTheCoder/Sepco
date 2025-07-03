@@ -36,6 +36,9 @@ import NETMetering from './pages/NETMetering';
 import TaxDeductionCertificate from './pages/TaxDeductionCertificate';
 import MobileRegistration from './pages/MobileRegistration';
 import Careers from './pages/Careers';
+import OrdersAndNotifications from './pages/orders-and-notifications';
+import OtherDocuments from './pages/OtherDocuments';
+import SeniorityLists from './pages/SeniorityLists';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -97,6 +100,9 @@ function App() {
         <Route path="/pages/net-metering" element={<NETMetering />} />
         <Route path="/pages/tax-deduction-certificate" element={<TaxDeductionCertificate />} />
         <Route path="/pages/mobile-registration" element={<MobileRegistration />} />
+        <Route path="/pages/orders-and-notifications" element={<OrdersAndNotifications />} />
+        <Route path="/pages/other-documents" element={<OtherDocuments />} />
+        <Route path="/pages/seniority-lists" element={<SeniorityLists />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
         <Route path="/tenders" element={<Page title="Tenders" />} />
         <Route path="/careers" element={<Careers />} />
