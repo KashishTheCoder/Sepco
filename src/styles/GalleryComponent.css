@@ -1,9 +1,9 @@
 .gallery-section {
     background: #fff;
-    border-radius: 12px;
-    padding: 2rem;
+    border-radius: 0.8rem;
+    padding: 2rem 4vw;
     margin: 2rem auto;
-    max-width: 1200px;
+    max-width: 98vw;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
@@ -11,7 +11,7 @@
     text-align: center;
     color: #0B1E3F;
     /* Changed from yellow to navbar blue */
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 2rem;
 }
@@ -19,16 +19,16 @@
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2vw;
     justify-content: center;
 }
 
 .gallery-card {
     background: #f9f9f9;
-    border-radius: 12px;
+    border-radius: 0.8rem;
     overflow: hidden;
     width: 100%;
-    max-width: 460px;
+    max-width: 90vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
@@ -52,6 +52,34 @@
     /* Changed to navbar blue */
     font-weight: 500;
     font-family: 'Nato Sans', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .gallery-section {
+        padding: 1.5rem 2vw;
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-caption {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section {
+        padding: 0.7rem 1vw;
+    }
+
+    .gallery-title {
+        font-size: 1rem;
+    }
+
+    .gallery-caption {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 768px) {
