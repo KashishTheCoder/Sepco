@@ -32,35 +32,6 @@
     display: block;
 }
 
-/* Arrows */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(11, 30, 63, 0.6);
-    border: none;
-    padding: 0.5rem 1.2rem;
-    color: #FFD600;
-    font-size: 2.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2;
-    transition: background 0.3s ease;
-    border-radius: 4px;
-}
-
-.arrow:hover {
-    background: rgba(11, 30, 63, 0.85);
-}
-
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-
 /* Overlay content */
 .slider-overlay {
     position: absolute;
@@ -179,11 +150,6 @@
         height: 220px;
         min-height: 180px;
         max-height: 260px;
-    }
-
-    .arrow {
-        font-size: 1.5rem;
-        padding: 0.3rem 0.7rem;
     }
 
     .slider-title {
