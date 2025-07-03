@@ -61,3 +61,44 @@
         flex: 2;
     }
 }
+
+@media (max-width: 900px) {
+    .chairman-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        max-width: 98%;
+    }
+
+    .chairman-image img {
+        max-width: 260px;
+    }
+
+    .chairman-content {
+        max-width: 98%;
+    }
+}
+
+@media (max-width: 600px) {
+    .chairman-container {
+        padding: 1rem 0.5rem;
+        max-width: 100%;
+    }
+
+    .chairman-title {
+        font-size: 1.2rem;
+    }
+
+    .chairman-text {
+        font-size: 0.95rem;
+        padding-left: 0.5rem;
+    }
+
+    .chairman-image img {
+        max-width: 180px;
+    }
+
+    .chairman-content {
+        max-width: 100%;
+    }
+}
