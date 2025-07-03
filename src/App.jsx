@@ -60,7 +60,6 @@ const Home = () => (
     <Slider />
     <InfoCardsSection />
     <ChairmanMessage />
-    <GalleryComponent />
     <HomePageCards />
   </div>
 );
