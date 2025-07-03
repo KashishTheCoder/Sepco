@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-
 
 import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
-import Slider from './components/Slider';
+// import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
 import HomePageCards from './components/HomePageCards';
@@ -57,7 +57,7 @@ const DynamicPage = () => {
 // Home page content
 const Home = () => (
   <div style={{ minHeight: '100vh', background: 'linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%)' }}>
-    <Slider />
+    {/* <Slider /> */}
     <InfoCardsSection />
     <ChairmanMessage />
     <GalleryComponent />
