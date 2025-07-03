@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Slider from './components/Slider';
-import ChairmanMessage from './components/ChairmanMessage';
-import InfoCardsSection from './components/InfoCardsSection';
-import HomePageCards from './components/HomePageCards';
-import GalleryComponent from './components/GalleryComponent';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
+import Slider from './components/Slider.jsx';
+import ChairmanMessage from './components/ChairmanMessage.jsx';
+import InfoCardsSection from './components/InfoCardsSection.jsx';
+import HomePageCards from './components/HomePageCards.jsx';
+import GalleryComponent from './components/GalleryComponent.jsx';
 import BoardOfDirectors from './pages/BoardOfDirectors';
 import About from './pages/About';
 import SeniorManagement from './pages/SeniorManagement';
