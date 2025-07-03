@@ -103,6 +103,7 @@ const Navbar = () => {
               className="navbar-item"
               key={menu}
               onMouseEnter={() => handleMenuEnter(menu)}
+              onMouseLeave={handleMenuLeave}
             >
               <span className="dropdown-title">
                 {menu} <span className="caret">▼</span>
