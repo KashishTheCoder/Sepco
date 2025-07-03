@@ -5,12 +5,14 @@ Light Blue: #e6f0ff
 */
 
 .navbar {
-  background: linear-gradient(to right, #0b1e3f, #102f61);
+  /* background: linear-gradient(to right, #0b1e3f, #102f61); */
+  /* Remove background and color for transparency */
+  background: transparent !important;
   color: white;
   font-family: 'Segoe UI', sans-serif;
   position: relative;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
 }
 
 .navbar-container {
@@ -26,7 +28,7 @@ Light Blue: #e6f0ff
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
 }
 
 .navbar-logo img {
@@ -53,7 +55,7 @@ Light Blue: #e6f0ff
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -86,8 +88,8 @@ Light Blue: #e6f0ff
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
-  color: black;
+  background: rgba(23, 37, 48, 0.92);
+  color: white;
   list-style: none;
   padding: 0.75rem;
   margin-top: 0.5rem;
@@ -113,14 +115,36 @@ Light Blue: #e6f0ff
 }
 
 .dropdown-menu li a {
-  color: #0b1e3f;
+  color: #6c7072;
   font-size: 14px;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s, font-weight 0.2s;
+  display: block;
+  padding: 2px 0 2px 22px;
+  position: relative;
+}
+
+.dropdown-menu li a::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFD600;
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: color 0.2s, left 0.2s;
 }
 
 .dropdown-menu li a:hover {
   color: #FFD600;
+  transform: translateX(7px);
+  font-weight: 600;
+}
+
+.dropdown-menu li a:hover::before {
+  content: '\26A1';
+  color: #3182ce;
+  left: 7px;
 }
 
 .dropdown-menu.show {
@@ -145,8 +169,8 @@ Light Blue: #e6f0ff
 
 /* Ministry of Power Logo */
 .mop-logo {
-  height: 2.2rem;
-  margin-left: 1rem;
+  height: 2.7rem;
+  margin-left: 2rem;
   filter: drop-shadow(0 0 4px #FFD600);
   transition: transform 0.3s ease;
 }
@@ -338,4 +362,33 @@ Light Blue: #e6f0ff
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.navbar-icon {
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 4px #00cfff);
+}
+
+.active-glow>a,
+.active-glow>.dropdown-title {
+  color: #00cfff !important;
+  text-shadow: 0 0 8px #00cfff, 0 0 2px #fff;
+  font-weight: bold;
+}
+
+.glowing-yellow {
+  filter: drop-shadow(0 0 8px #FFD600) brightness(1.2);
+}
+
+.navbar-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(11, 30, 63, 0.92) 60%, rgba(16, 47, 97, 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
