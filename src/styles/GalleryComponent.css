@@ -19,8 +19,10 @@
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
+    flex-direction: row !important;
+    gap: 2rem;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .gallery-card {
@@ -28,7 +30,9 @@
     border-radius: 0.8rem;
     overflow: hidden;
     width: 100%;
-    max-width: 90vw;
+    max-width: 420px;
+    margin: 0 0.5rem 2rem 0.5rem;
+    flex: 1 1 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
@@ -84,7 +88,14 @@
 
 @media (max-width: 768px) {
     .gallery-grid {
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: center;
+        gap: 1.2rem;
+    }
+
+    .gallery-card {
+        max-width: 98vw;
+        margin: 0 0 1.2rem 0;
+        flex: 1 1 100%;
     }
 }

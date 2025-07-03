@@ -116,10 +116,10 @@ const Slider = () => {
                 <polyline points="60,10 80,50 65,50 85,110 45,65 60,65 40,10" fill="none" stroke="#FFD600" strokeWidth="7" strokeLinejoin="round" filter="url(#glow)" />
                 <defs>
                     <filter id="glow">
-                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                        <feGaussianBlur stdDeviation="4" result="coloredBlur" />
                         <feMerge>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="SourceGraphic" />
                         </feMerge>
                     </filter>
                 </defs>
@@ -138,7 +138,7 @@ const Slider = () => {
                 >
                     Go to MIS Portal
                 </a>
-                
+
             </div>
 
             <button className="arrow prev" onClick={() => goTo(current - 1)}>‹</button>
