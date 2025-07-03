@@ -104,7 +104,7 @@ function App() {
     //     <Route path="/careers" element={<Careers />} />
     //     <Route path="/news" element={<News />} />
     //   </Routes>
-      {/* <Footer /> */ }
+    //  <Footer /> 
     // </Router>
   );
 }
