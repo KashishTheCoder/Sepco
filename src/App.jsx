@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Slider from './components/Slider';
 import ChairmanMessage from './components/ChairmanMessage';
 import InfoCardsSection from './components/InfoCardsSection';
@@ -103,7 +103,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/news" element={<News />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
