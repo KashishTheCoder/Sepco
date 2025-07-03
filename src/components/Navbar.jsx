@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 import sepcoLogo from '../assets/sepco_logo.png';
@@ -15,6 +15,17 @@ const menuItems = {
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    // Animation duration should match the CSS animation (2.5s for effect, 0.5s for fade)
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+      setShowContent(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const isMobile = () => window.innerWidth <= 768;
 
@@ -74,8 +85,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar" onMouseEnter={handleNavbarMouseEnter} onMouseLeave={handleNavbarMouseLeave}>
-      <div className="navbar-container">
+    <nav className="navbar">
+      {showAnimation && (
+        <div className="navbar-current-overlay">
+          {/* Left Animated Line */}
+          <svg className="current-svg left" width="50%" height="16" viewBox="0 0 400 16">
+            <polyline
+              className="current-polyline left"
+              points="0,8 120,8 200,2 220,14 240,2 260,14 280,2 320,8 400,8"
+              fill="none"
+              stroke="#FFD600"
+              strokeWidth="8"
+              strokeLinejoin="miter"
+            />
+          </svg>
+          {/* Right Animated Line */}
+          <svg className="current-svg right" width="50%" height="16" viewBox="0 0 400 16">
+            <polyline
+              className="current-polyline right"
+              points="400,8 280,8 200,14 180,2 160,14 140,2 120,14 80,8 0,8"
+              fill="none"
+              stroke="#FFD600"
+              strokeWidth="8"
+              strokeLinejoin="miter"
+            />
+          </svg>
+        </div>
+      )}
+      <div className={`navbar-container${showContent ? ' navbar-content-visible' : ''}`} style={{ opacity: showContent ? 1 : 0 }}>
         {/* Logo and Title */}
         <div className="navbar-logo">
           <img src={sepcoLogo} alt="SEPCO Logo" />
