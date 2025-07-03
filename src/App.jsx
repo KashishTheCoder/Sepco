@@ -59,7 +59,7 @@ const DynamicPage = () => {
 
 // Home page content
 const Home = () => (
-  <div style={{ minHeight: '100vh', background: 'linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%)' }}>
+  <div style={{ minHeight: '100vh', background: 'linear-gradient(120deg,rgb(23, 31, 56) 0%,rgb(35, 45, 82) 100%)' }}>
     <Slider />
     <InfoCardsSection />
     <ChairmanMessage />
