@@ -88,11 +88,16 @@ Light Blue: #e6f0ff
   list-style: none;
   padding: 0.75rem;
   margin-top: 0.5rem;
-  display: none;
   border-radius: 6px;
   min-width: 220px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   z-index: 999;
+
+  /* Animation properties */
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 .dropdown-menu li {
@@ -115,8 +120,12 @@ Light Blue: #e6f0ff
 }
 
 .dropdown-menu.show {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition-delay: 0.1s;
 }
+
 
 .caret {
   font-size: 12px;

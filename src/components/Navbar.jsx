@@ -15,8 +15,24 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const toggleDropdown = (menu) => {
-    setActiveMenu(activeMenu === menu ? null : menu);
+  // Helper to check if device is mobile (for click vs hover)
+  const isMobile = () => window.innerWidth <= 768;
+
+  const handleMenuEnter = (menu) => {
+    if (!isMobile()) setActiveMenu(menu);
+  };
+
+  const handleMenuLeave = () => {
+    if (!isMobile()) setActiveMenu(null);
+  };
+
+  const handleNavbarMouseEnter = (e) => {
+    // If not hovering over a menu item, close dropdown
+    if (!isMobile()) setActiveMenu(null);
+  };
+
+  const handleNavbarMouseLeave = () => {
+    if (!isMobile()) setActiveMenu(null);
   };
 
   const buildLink = (label) => {
@@ -62,7 +78,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" onMouseEnter={handleNavbarMouseEnter} onMouseLeave={handleNavbarMouseLeave}>
       <div className="navbar-container">
         {/* Logo and Title */}
         <div className="navbar-logo">
@@ -80,15 +96,14 @@ const Navbar = () => {
 
         {/* Main Menu */}
         <ul className={`navbar-menu ${mobileOpen ? 'open' : ''}`}>
-          <li className='navbar-item'>
+          <li className='navbar-item' onMouseEnter={() => setActiveMenu(null)}>
             <Link to="/">Home</Link>
           </li>
           {Object.entries(menuItems).map(([menu, items]) => (
             <li
               className="navbar-item"
               key={menu}
-              onClick={() => toggleDropdown(menu)}
-              onMouseEnter={() => setActiveMenu(menu)}
+              onMouseEnter={() => handleMenuEnter(menu)}
             >
               <span className="dropdown-title">
                 {menu} <span className="caret">▼</span>
@@ -106,8 +121,8 @@ const Navbar = () => {
               </ul>
             </li>
           ))}
-          <li className="navbar-item"><Link to="/tenders">Tenders</Link></li>
-          <li className="navbar-item"><Link to="/careers">Careers</Link></li>
+          <li className="navbar-item" onMouseEnter={() => setActiveMenu(null)}><Link to="/tenders">Tenders</Link></li>
+          <li className="navbar-item" onMouseEnter={() => setActiveMenu(null)}><Link to="/careers">Careers</Link></li>
         </ul>
       </div>
     </nav>
