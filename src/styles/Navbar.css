@@ -14,9 +14,9 @@ Light Blue: #e6f0ff
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 95vw;
   margin: auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,19 +30,21 @@ Light Blue: #e6f0ff
 }
 
 .navbar-logo img {
-  height: 55px;
+  height: 3.2rem;
+  max-width: 12vw;
+  min-width: 40px;
   filter: drop-shadow(0 0 4px #FFD600);
 }
 
 .navbar-logo h1 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #FFD600;
   margin: 0;
 }
 
 .navbar-logo p {
-  font-size: 12px;
+  font-size: 0.85rem;
   color: #cce4f7;
   margin: 0;
 }
@@ -51,7 +53,8 @@ Light Blue: #e6f0ff
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.2rem;
+  align-items: center;
 }
 
 .navbar-menu.open {
@@ -89,7 +92,7 @@ Light Blue: #e6f0ff
   padding: 0.75rem;
   margin-top: 0.5rem;
   border-radius: 6px;
-  min-width: 220px;
+  min-width: 180px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   z-index: 999;
 
@@ -98,6 +101,7 @@ Light Blue: #e6f0ff
   transform: translateY(10px);
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .dropdown-menu li {
@@ -126,18 +130,29 @@ Light Blue: #e6f0ff
   transition-delay: 0.1s;
 }
 
-
 .caret {
-  font-size: 12px;
-  margin-left: 4px;
+  font-size: 0.85rem;
+  margin-left: 0.25rem;
 }
 
 /* Mobile Toggle */
 .navbar-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 2rem;
   cursor: pointer;
   color: #FFD600;
+}
+
+/* Ministry of Power Logo */
+.mop-logo {
+  height: 2.2rem;
+  margin-left: 1rem;
+  filter: drop-shadow(0 0 4px #FFD600);
+  transition: transform 0.3s ease;
+}
+
+.mop-logo:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -168,5 +183,159 @@ Light Blue: #e6f0ff
 
   .dropdown-menu li a {
     color: #0b1e3f;
+  }
+
+  .mop-logo {
+    margin-top: 1rem;
+    height: 40px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem 1vw;
+  }
+
+  .navbar-logo img {
+    height: 2.2rem;
+    min-width: 28px;
+  }
+
+  .navbar-logo h1 {
+    font-size: 1rem;
+  }
+
+  .navbar-logo p {
+    font-size: 0.7rem;
+  }
+
+  .navbar-menu {
+    gap: 0.5rem;
+  }
+
+  .dropdown-menu {
+    min-width: 120px;
+    font-size: 0.85rem;
+  }
+
+  .mop-logo {
+    height: 1.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+/* --- Current Flow Animation Overlay --- */
+.navbar-current-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.current-line {
+  position: absolute;
+  top: 50%;
+  height: 8px;
+  background: repeating-linear-gradient(135deg, #FFD600 0 8px, #0B1E3F 8px 16px);
+  filter: drop-shadow(0 0 8px #FFD600);
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.current-line.left {
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  animation: current-grow-left 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards, current-fade 0.5s 2.2s forwards;
+}
+
+.current-line.right {
+  right: 0;
+  transform: translateY(-50%);
+  width: 0;
+  animation: current-grow-right 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards, current-fade 0.5s 2.2s forwards;
+}
+
+@keyframes current-grow-left {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes current-grow-right {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes current-fade {
+  to {
+    opacity: 0;
+  }
+}
+
+.navbar-content-visible {
+  animation: navbar-fade-in 0.7s 0.1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+@keyframes navbar-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Remove old .zigzag and .zigzag-line styles */
+.zigzag,
+.zigzag-line {
+  display: none !important;
+}
+
+.current-svg {
+  position: absolute;
+  top: 50%;
+  height: 16px;
+  pointer-events: none;
+  z-index: 2100;
+}
+
+.current-svg.left {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.current-svg.right {
+  right: 0;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.current-polyline {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: draw-polyline 2.2s cubic-bezier(0.7, 0, 0.3, 1) forwards, current-fade 0.5s 2.2s forwards;
+}
+
+@keyframes draw-polyline {
+  to {
+    stroke-dashoffset: 0;
   }
 }

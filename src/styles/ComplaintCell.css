@@ -4,17 +4,17 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 4vw 1rem 4vw;
     animation: complaint-fade-in 1.2s;
 }
 
 .complaint-container {
     background: #fff;
-    border-radius: 18px;
+    border-radius: 1.1rem;
     box-shadow: 0 8px 32px rgba(11, 30, 63, 0.13);
-    max-width: 1000px;
+    max-width: 95vw;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 4vw;
     margin-top: 1rem;
     animation: complaint-fade-in 1.2s;
 }
@@ -33,16 +33,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 2vw;
 }
 
 /* Individual card styles */
 .complaint-card {
-    flex: 1 1 280px;
-    max-width: 400px;
+    flex: 1 1 22vw;
+    max-width: 340px;
+    min-width: 180px;
     background: white;
-    border-radius: 14px;
-    padding: 1.5rem;
+    border-radius: 0.7rem;
+    padding: 1.5rem 2vw;
     text-align: center;
     border-top: 4px solid #0072c6;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -61,7 +62,7 @@
 }
 
 .complaint-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #0B1E3F;
     margin-top: 0.5rem;
@@ -73,18 +74,51 @@
     color: #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .complaint-bg {
+        padding: 1.5rem 2vw 1rem 2vw;
+    }
+
     .complaint-container {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 2vw;
     }
 
     .complaint-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
-    .complaint-card-grid {
-        flex-direction: column;
-        gap: 1.5rem;
+    .complaint-card {
+        min-width: 120px;
+        font-size: 0.95rem;
+        padding: 1rem 1vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .complaint-bg {
+        padding: 1rem 1vw 0.5rem 1vw;
+    }
+
+    .complaint-container {
+        padding: 0.7rem 1vw;
+    }
+
+    .complaint-title {
+        font-size: 1rem;
+    }
+
+    .complaint-card {
+        min-width: 80px;
+        font-size: 0.85rem;
+        padding: 0.7rem 0.5vw;
+    }
+
+    .complaint-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .complaint-card p {
+        font-size: 0.8rem;
     }
 }
 
