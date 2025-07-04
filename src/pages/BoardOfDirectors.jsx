@@ -20,19 +20,21 @@ const directors = [
 
 export default function BoardOfDirectors() {
     return (
-        <section className="board-section" style={{ background: 'linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%)' }}>
-            <div className="container">
-                <h2 className="board-heading">Board of Directors</h2>
-                <div className="cards-wrapper">
-                    {directors.map((member, index) => (
-                        <div className="board-card" key={index}>
-                            <h3>{member.title}</h3>
-                            <p>{member.name}</p>
-                            <p>{member.role}</p>
-                        </div>
-                    ))}
+        <div style={{ minHeight: '100vh', background: 'linear-gradient(120deg, #e6f0ff 0%, #f8fafc 100%)' }}>
+            <section className="board-section">
+                <div className="container">
+                    <h2 className="board-heading">Board of Directors</h2>
+                    <div className="cards-wrapper">
+                        {directors.map((member, index) => (
+                            <div className="board-card" key={index}>
+                                <h3>{member.title}</h3>
+                                <p>{member.name}</p>
+                                <p>{member.role}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 }
