@@ -118,7 +118,7 @@ Light Blue: #e6f0ff
   text-decoration: none;
   transition: color 0.2s, transform 0.2s, font-weight 0.2s;
   display: block;
-  padding: 2px 0 2px 22px;
+  padding: 2px 0 2px 28px;
   position: relative;
 }
 
@@ -131,6 +131,7 @@ Light Blue: #e6f0ff
   font-size: 1rem;
   opacity: 0.7;
   transition: color 0.2s, left 0.2s;
+  margin-right: 8px;
 }
 
 .dropdown-menu li a:hover {
@@ -142,7 +143,7 @@ Light Blue: #e6f0ff
 .dropdown-menu li a:hover::before {
   content: '\26A1';
   color: #3182ce;
-  left: 7px;
+  left: 10px;
 }
 
 .dropdown-menu.show {
