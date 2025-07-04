@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 import sepcoLogo from '../assets/sepco_logo.png';
 import mopLogo from '../assets/mop.png';
@@ -15,6 +15,8 @@ const menuItems = {
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const isMobile = () => window.innerWidth <= 768;
 
@@ -77,7 +79,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar${isHome ? ' navbar-transparent' : ' navbar-solid'}`}>
       <div className="navbar-container navbar-content-visible" style={{ opacity: 1 }}>
         {/* Logo and Title */}
         <div className="navbar-logo">

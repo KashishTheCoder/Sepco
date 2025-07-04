@@ -5,12 +5,22 @@ Light Blue: #e6f0ff
 */
 
 .navbar {
-  background: linear-gradient(to right, #0b1e3f, #102f61);
   color: white;
   font-family: 'Segoe UI', sans-serif;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-transparent {
+  background: transparent;
+}
+
+.navbar-solid {
+  background: linear-gradient(135deg, #0B1E3F 0%, #1a2f5a 100%);
+  position: relative;
 }
 
 .navbar-container {

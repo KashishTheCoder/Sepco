@@ -27,14 +27,11 @@ const quickActions = [
 
 const Slider = () => {
     const [taglineIdx, setTaglineIdx] = useState(0);
-    const [lightningAnim, setLightningAnim] = useState(false);
     const taglineInterval = useRef(null);
 
     useEffect(() => {
         taglineInterval.current = setInterval(() => {
             setTaglineIdx((prev) => (prev + 1) % taglines.length);
-            setLightningAnim(true);
-            setTimeout(() => setLightningAnim(false), 800);
         }, 3500);
         return () => clearInterval(taglineInterval.current);
     }, []);
@@ -44,25 +41,11 @@ const Slider = () => {
             {/* Animated Glowing Border */}
             <div className="slider-glow-border"></div>
 
-            {/* Lightning SVG Overlay */}
-            <svg className={`slider-lightning-svg${lightningAnim ? ' animate' : ''}`} width="120" height="120" viewBox="0 0 120 120">
-                <polyline points="60,10 80,50 65,50 85,110 45,65 60,65 40,10" fill="none" stroke="#FFD600" strokeWidth="7" strokeLinejoin="round" filter="url(#glow)" />
-                <defs>
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-                        <feMerge>
-                            <feMergeNode in="coloredBlur" />
-                            <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                    </filter>
-                </defs>
-            </svg>
-
             {/* Overlay Content */}
             <div className="slider-overlay">
-                <h2 className="slider-title slider-glow-text">Welcome to SEPCO</h2>
-                <p className="slider-subtitle">Sukkur Electric Power Company</p>
-                <div className="slider-tagline">{taglines[taglineIdx]}</div>
+                <h2 className="slider-title slider-attractive-font">Welcome to SEPCO</h2>
+                <p className="slider-subtitle slider-attractive-font">Sukkur Electric Power Company</p>
+                <div className="slider-tagline slider-attractive-font">{taglines[taglineIdx]}</div>
                 <a
                     href="https://ibs.pitc.com.pk/dashboard/user/auth/sign-in"
                     className="slider-button"
