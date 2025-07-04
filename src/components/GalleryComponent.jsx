@@ -14,17 +14,18 @@ import sepco11 from '../assets/sepco11.jpg';
 
 const GalleryComponent = () => {
     return (
-        <section className="gallery-section">
-            <h2 className="gallery-title">Image Gallery</h2>
-            <div className="gallery-grid">
-                {[sepco1, sepco2, sepco3, sepco4, sepco5, sepco6, sepco7, sepco8, sepco9, sepco10, sepco11].map((img, idx) => (
-                    <div className="gallery-card" key={idx}>
-                        <img src={img} alt={`SEPCO Event Photo ${idx + 1}`} className="gallery-img" />
-                        <p className="gallery-caption">SEPCO Event Photo</p>
-                    </div>
-                ))}
-            </div>
-        </section>
+        <div className="gallery-bg">
+            <section className="gallery-section">
+                <h2 className="gallery-title">Image Gallery</h2>
+                <div className="gallery-grid">
+                    {[sepco1, sepco2, sepco3, sepco4, sepco5, sepco6, sepco7, sepco8, sepco9, sepco10, sepco11].map((img, idx) => (
+                        <div className="gallery-card" key={idx}>
+                            <img src={img} alt={`SEPCO Event Photo ${idx + 1}`} className="gallery-img" />
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </div>
     );
 };
 
