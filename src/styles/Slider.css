@@ -6,7 +6,8 @@
     height: 40vw;
     overflow: hidden;
     z-index: 1;
-    background: #0B1E3F;
+    /* background: transparent !important; */
+    box-shadow: none !important;
     left: 50%;
     transform: translateX(-50%);
 }

@@ -5,14 +5,12 @@ Light Blue: #e6f0ff
 */
 
 .navbar {
-  /* background: linear-gradient(to right, #0b1e3f, #102f61); */
-  /* Remove background and color for transparency */
-  background: transparent !important;
+  background: linear-gradient(to right, #0b1e3f, #102f61);
   color: white;
   font-family: 'Segoe UI', sans-serif;
   position: relative;
   z-index: 1000;
-  box-shadow: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-container {
@@ -28,7 +26,7 @@ Light Blue: #e6f0ff
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }
 
 .navbar-logo img {
@@ -55,7 +53,7 @@ Light Blue: #e6f0ff
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
   align-items: center;
 }
 
@@ -169,8 +167,8 @@ Light Blue: #e6f0ff
 
 /* Ministry of Power Logo */
 .mop-logo {
-  height: 2.7rem;
-  margin-left: 2rem;
+  height: 2.2rem;
+  margin-left: 1rem;
   filter: drop-shadow(0 0 4px #FFD600);
   transition: transform 0.3s ease;
 }
@@ -362,33 +360,4 @@ Light Blue: #e6f0ff
   to {
     stroke-dashoffset: 0;
   }
-}
-
-.navbar-icon {
-  font-size: 1.2rem;
-  margin-right: 0.3rem;
-  vertical-align: middle;
-  filter: drop-shadow(0 0 4px #00cfff);
-}
-
-.active-glow>a,
-.active-glow>.dropdown-title {
-  color: #00cfff !important;
-  text-shadow: 0 0 8px #00cfff, 0 0 2px #fff;
-  font-weight: bold;
-}
-
-.glowing-yellow {
-  filter: drop-shadow(0 0 8px #FFD600) brightness(1.2);
-}
-
-.navbar-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(11, 30, 63, 0.92) 60%, rgba(16, 47, 97, 0.85) 100%);
-  z-index: 1;
-  pointer-events: none;
 }
