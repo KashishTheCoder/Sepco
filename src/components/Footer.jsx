@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
 
 const Footer = () => {
@@ -12,33 +13,33 @@ const Footer = () => {
               <div className="link-column">
                 <h4>Company</h4>
                 <ul>
-                  <li>Home</li>
-                  <li>About SEPCO</li>
-                  <li>CEO SEPCO</li>
-                  <li>Board of Directors</li>
-                  <li>Contact Us</li>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/about">About SEPCO</Link></li>
+                  <li><Link to="/pages/ceo-sepco">CEO SEPCO</Link></li>
+                  <li><Link to="/pages/board-of-directors">Board of Directors</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
               </div>
 
               <div className="link-column">
                 <h4>Services</h4>
                 <ul>
-                  <li>Online Payroll</li>
-                  <li>Entry Form</li>
-                  <li>Phone Directory</li>
-                  <li>Policies</li>
-                  <li>Templates</li>
+                  <li><Link to="/online-payroll">Online Payroll</Link></li>
+                  <li><Link to="/entry-form">Entry Form</Link></li>
+                  <li><Link to="/phone-directory">Phone Directory</Link></li>
+                  <li><Link to="/policies">Policies</Link></li>
+                  <li><Link to="/templates">Templates</Link></li>
                 </ul>
               </div>
 
               <div className="link-column">
                 <h4>Quick Links</h4>
                 <ul>
-                  <li>Dashboard</li>
-                  <li>MIS Website</li>
-                  <li>Old Website</li>
-                  <li>Webmail</li>
-                  <li>Legislation</li>
+                  <li><Link to="/dashboard">Dashboard</Link></li>
+                  <li><Link to="/mis-website">MIS Website</Link></li>
+                  <li><Link to="/old-website">Old Website</Link></li>
+                  <li><Link to="/webmail">Webmail</Link></li>
+                  <li><Link to="/legislation">Legislation</Link></li>
                 </ul>
               </div>
             </div>
