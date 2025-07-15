@@ -39,6 +39,8 @@ import Careers from './pages/Careers';
 import OrdersAndNotifications from './pages/orders-and-notifications';
 import OtherDocuments from './pages/OtherDocuments';
 import SeniorityLists from './pages/SeniorityLists';
+import Tenders from './pages/Tenders.jsx';
+import DataAndStatistics from './pages/DataAndStatistics';
 
 // Reusable page component
 const Page = ({ title }) => (
@@ -103,8 +105,9 @@ function App() {
         <Route path="/pages/orders-and-notifications" element={<OrdersAndNotifications />} />
         <Route path="/pages/other-documents" element={<OtherDocuments />} />
         <Route path="/pages/seniority-lists" element={<SeniorityLists />} />
+        <Route path="/pages/data-and-statistics" element={<DataAndStatistics />} />
         <Route path="/pages/:pageId" element={<DynamicPage />} />
-        <Route path="/tenders" element={<Page title="Tenders" />} />
+        <Route path="/tenders" element={<Tenders />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/news" element={<News />} />
       </Routes>

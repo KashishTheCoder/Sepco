@@ -51,9 +51,11 @@ const Navbar = () => {
     if (label === 'Vision Mission and Values') return '/pages/vision-mission-values';
     if (label === 'Organogram') return '/organogram';
     if (label === 'Load Management Schedule') return '/pages/load-management-schedule';
+    if (label === 'Tariff-Wise Billing/Collection') return null;
+    if (label === 'Bill Estimator') return null;
     if (label === 'Daily, Monthly, and Quarterly Reports') return '/pages/reports';
     if (label === 'Tariff Guide') return 'https://nepra.org.pk/tariff/Distribution%20SEPCO.php';
-    if (label === 'Duplicate Bill') return 'https://bill.pitc.com.pk/';
+    if (label === 'Duplicate Bill') return 'https://bill.pitc.com.pk/sepcobill';
     if (label === 'New Connection Cost Calculator') return 'https://www.pitc.com.pk/index.php/new-connection-estimator';
     if (label === 'New Connection Application') return 'https://www.enc.com.pk/';
     if (label === 'Load Shedding Schedule') return '/pages/load-management-schedule';
@@ -111,15 +113,20 @@ const Navbar = () => {
                 {menu} <span className="caret">▼</span>
               </span>
               <ul className={`dropdown-menu ${activeMenu === menu ? 'show' : ''}`}>
-                {items.map((item) => (
-                  <li key={item}>
-                    {buildLink(item).startsWith('http') ? (
-                      <a href={buildLink(item)} target="_blank" rel="noopener noreferrer">{item}</a>
-                    ) : (
-                      <Link to={buildLink(item)}>{item}</Link>
-                    )}
-                  </li>
-                ))}
+                {items.map((item) => {
+                  const link = buildLink(item);
+                  return (
+                    <li key={item}>
+                      {link === null ? (
+                        <span className="dropdown-link" style={{ cursor: 'default' }}>{item}</span>
+                      ) : link.startsWith('http') ? (
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="dropdown-link">{item}</a>
+                      ) : (
+                        <Link to={link} className="dropdown-link">{item}</Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </li>
           ))}

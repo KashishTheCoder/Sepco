@@ -12,15 +12,30 @@ import sepco9 from '../assets/sepco9.jpg';
 import sepco10 from '../assets/sepco10.jpg';
 import sepco11 from '../assets/sepco11.jpg';
 
+const galleryImages = [
+    { img: sepco1, desc: 'The Lansdowne bridge' },
+    { img: sepco2, desc: 'SEpCO Power Plant' },
+    { img: sepco3, desc: 'Team Meeting in Progress' },
+    { img: sepco4, desc: 'Award Ceremony for Employees' },
+    { img: sepco5, desc: 'CSR Activity: Tree Plantation Drive' },
+    { img: sepco6, desc: 'Technical Training Session' },
+    { img: sepco7, desc: 'SEPCO Engineers at Work' },
+    { img: sepco8, desc: 'Community Outreach Program' },
+    { img: sepco9, desc: 'Safety Drill Exercise' },
+    { img: sepco10, desc: 'New Project Launch Event' },
+    { img: sepco11, desc: 'Employee Wellness Initiative' },
+];
+
 const GalleryComponent = () => {
     return (
         <div className="gallery-bg">
             <section className="gallery-section">
                 <h2 className="gallery-title">Image Gallery</h2>
                 <div className="gallery-grid">
-                    {[sepco1, sepco2, sepco3, sepco4, sepco5, sepco6, sepco7, sepco8, sepco9, sepco10, sepco11].map((img, idx) => (
+                    {galleryImages.map((item, idx) => (
                         <div className="gallery-card" key={idx}>
-                            <img src={img} alt={`SEPCO Event Photo ${idx + 1}`} className="gallery-img" />
+                            <img src={item.img} alt={`SEPCO Event Photo ${idx + 1}`} className="gallery-img" />
+                            <div className="gallery-desc">{item.desc}</div>
                         </div>
                     ))}
                 </div>

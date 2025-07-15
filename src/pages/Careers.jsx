@@ -99,7 +99,9 @@ const Careers = () => (
     <div className="ks-container" style={{ position: 'relative', maxWidth: 1100 }}>
       <h1 className="ks-title" style={{ marginBottom: 0 }}>Careers</h1>
       <a
-        href="#"
+        href="https://sepco-jobs.pitc.com.pk/"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           position: 'absolute',
           top: 24,

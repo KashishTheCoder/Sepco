@@ -128,3 +128,100 @@
     font-size: 0.9rem;
   }
 }
+
+.tenders-table-wrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 4px 24px rgba(11, 30, 63, 0.10);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.tenders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.tenders-table th {
+  background: #0B1E3F;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.9rem 0.5rem;
+  border-bottom: 2px solid #FFD600;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.tenders-table td {
+  color: #1a2f5a;
+  font-size: 1.05rem;
+  text-align: left;
+  padding: 0.7rem 0.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e3eaf5;
+  background: #fafdff;
+  transition: background 0.2s;
+}
+
+.tenders-table tbody tr:hover td {
+  background: #e6f0ff;
+}
+
+.tenders-table a {
+  color: #1565c0;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.tenders-table a::after {
+  content: '\1F4E5';
+  /* 📥 download icon */
+  font-size: 1.1em;
+  margin-left: 0.2em;
+  opacity: 0.7;
+}
+
+.tenders-table a:hover {
+  color: #FFD600;
+}
+
+.tenders-table tbody tr:nth-child(even) td {
+  background: #f4f8fc;
+}
+
+.tenders-table tbody tr:nth-child(odd) td {
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .tenders-table th {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.2rem;
+  }
+
+  .tenders-table td {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tenders-table th {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.1rem;
+  }
+
+  .tenders-table td {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.1rem;
+  }
+}
