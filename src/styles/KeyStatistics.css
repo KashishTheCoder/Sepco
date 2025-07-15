@@ -5,6 +5,8 @@
   align-items: flex-start;
   justify-content: center;
   padding: 3rem 4vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .ks-container {
@@ -18,6 +20,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .ks-title {
@@ -223,5 +227,75 @@
   .tenders-table td {
     font-size: 0.85rem;
     padding: 0.3rem 0.1rem;
+  }
+}
+
+.defaulter-filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+  background: #f4f8fc;
+  border-radius: 0.7rem;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 2px 12px rgba(11, 30, 63, 0.07);
+  overflow-x: auto;
+  scrollbar-width: thin;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.defaulter-filters input,
+.defaulter-filters select {
+  padding: 0.5rem 0.7rem;
+  border: 1.5px solid #b7c6e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #1a2f5a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(11, 30, 63, 0.04);
+  min-width: 70px;
+  max-width: 120px;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.defaulter-filters input:focus,
+.defaulter-filters select:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px #e6f0ff;
+}
+
+.defaulter-filters select {
+  cursor: pointer;
+}
+
+.defaulter-filters input[placeholder="Name/Address"] {
+  min-width: 180px;
+  max-width: 240px;
+}
+
+.defaulter-filters select option[value="All GVT/PVT"],
+.defaulter-filters select:last-child {
+  min-width: 140px;
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .defaulter-filters {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding: 0.7rem 0.2rem;
+    overflow-x: auto;
+  }
+  .defaulter-filters input,
+  .defaulter-filters select {
+    width: unset !important;
+    min-width: 90px;
+    max-width: 180px;
   }
 }
