@@ -14,12 +14,12 @@ import sepco11 from '../assets/sepco11.jpg';
 
 const galleryImages = [
     { img: sepco1, desc: 'The Lansdowne bridge' },
-    { img: sepco2, desc: 'SEpCO Power Plant' },
-    { img: sepco3, desc: 'Team Meeting in Progress' },
-    { img: sepco4, desc: 'Award Ceremony for Employees' },
+    { img: sepco2, desc: 'SEPCO Power Plant' },
+    { img: sepco3, desc: 'SEPCO Headquarters' },
+    { img: sepco4, desc: 'LESCO Headquarters' },
     { img: sepco5, desc: 'CSR Activity: Tree Plantation Drive' },
-    { img: sepco6, desc: 'Technical Training Session' },
-    { img: sepco7, desc: 'SEPCO Engineers at Work' },
+    { img: sepco6, desc: 'Sukkur Barrage' },
+    { img: sepco7, desc: 'SEPCO Solar System' },
     { img: sepco8, desc: 'Community Outreach Program' },
     { img: sepco9, desc: 'Safety Drill Exercise' },
     { img: sepco10, desc: 'New Project Launch Event' },
